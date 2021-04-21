@@ -1,4 +1,6 @@
-const colmunsBefore = (arr2d) => {
+
+
+const rows = (arr2d) => {
     for (let i = 0; i < arr2d.length; i++) {
         for (let j = 0; j < arr2d[0].length; j++) {
             arr2d[i][j] = "0";
@@ -6,7 +8,7 @@ const colmunsBefore = (arr2d) => {
     }
 }
 
-const rowsBefore = (arr2d) => {
+const columns = (arr2d) => {
     for (let i = 0; i < arr2d[0].length; i++) {
         for (let j = 0; j < arr2d.length; j++) {
             arr2d[j][i] = "0";
@@ -30,6 +32,11 @@ for (let i = 0; i < 1000; i++) {
     }
 }
 
-testTime(colmunsBefore,arr2d);
-testTime(rowsBefore,arr2d);
+testTime(rows,arr2d);
+testTime(columns,arr2d);
+/*
+result in the trerminal:
+colmunsBefore :  4.871
+rowsBefore :  33.273
+*/
 

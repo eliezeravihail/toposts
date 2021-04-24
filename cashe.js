@@ -24,7 +24,7 @@ const testTime = (func, arg) => {
     console.log(func.name,": ",((new Date()).getTime() - timestart)/1000.0);
 }
 
-arr2d = new Array(1000);
+const arr2d = new Array(1000);
 for (let i = 0; i < 1000; i++) {
         arr2d[i] = new Array(1000).fill(0);
 }

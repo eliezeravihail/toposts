@@ -24,19 +24,12 @@ const testTime = (func, arg) => {
     console.log(func.name,": ",((new Date()).getTime() - timestart)/1000.0);
 }
 
-arr2d = [[]];
+arr2d = new Array(1000);
 for (let i = 0; i < 1000; i++) {
-    arr2d[i] = []
-    for (let j = 0; j < 1000; j++) {
-        arr2d[i][j] = i*j;
-    }
+        arr2d[i] = new Array(1000).fill(0);
 }
 
 testTime(rows,arr2d);
 testTime(columns,arr2d);
-/*
-result in the trerminal:
-colmunsBefore :  4.871
-rowsBefore :  33.273
-*/
+
 

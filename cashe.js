@@ -29,6 +29,7 @@ for (let i = 0; i < 1000; i++) {
         arr2d[i] = new Array(1000).fill(0);
 }
 
+
 testTime(rows,arr2d);
 testTime(columns,arr2d);
 

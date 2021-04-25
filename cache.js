@@ -26,10 +26,10 @@ const testTime = (func, arg) => {
 
 const findChacheLimit = (testFunc, rowsFunc,ColumnsFunc)=>{
     let limit = 10;
-    let maxTest = 100000;
+    let maxTest = 10000;
     const gump = 10;
     const result = new Array(maxTest/gump);
-    while (limit<maxTest){
+    while (limit<=maxTest){
         const tempArr2d = new Array(limit);
         for (let i = 0; i < limit; i++) {
             tempArr2d[i] = new Array(limit).fill(0);
@@ -37,12 +37,10 @@ const findChacheLimit = (testFunc, rowsFunc,ColumnsFunc)=>{
         result.push(`line's length: ${limit}\t rows: ${testFunc(rowsFunc,tempArr2d)}\tcolumns: ${testFunc(ColumnsFunc,tempArr2d)}`);
         limit *= gump;
     }
-    
-    result.forEach(x=>console.log(x))
-
+    return result;
 }
 
-findChacheLimit(testTime, readByRows,readByColumns)
+findChacheLimit(testTime, readByRows,readByColumns).forEach(x=>console.log(x))
 
 
 

@@ -1,8 +1,8 @@
-
+var temp;
 const readByRows = (arr2d) => {
     for (let i = 0; i < arr2d.length; i++) {
         for (let j = 0; j < arr2d[0].length; j++) {
-            arr2d[i][j];
+            temp = arr2d[i][j];
         }
     }
 }
@@ -10,7 +10,7 @@ const readByRows = (arr2d) => {
 const readByColumns = (arr2d) => {
     for (let i = 0; i < arr2d[0].length; i++) {
         for (let j = 0; j < arr2d.length; j++) {
-            arr2d[j][i];
+            temp = arr2d[j][i];
         }
     }
 }
